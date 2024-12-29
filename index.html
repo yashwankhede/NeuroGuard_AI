@@ -29,10 +29,14 @@
             box-sizing: border-box;
             z-index: 1; /* Ensures the content stays above the video */
             position: relative; /* Allows it to flow with the page */
+            text-align: center; /* Centers the image horizontally */
         }
-        h1 {
-            text-align: center;
-            color: #00ff40;
+        .logo {
+            width: 650px; /* Set desired width */
+            height: 150px; /* Set desired height */
+            object-fit: cover; /* Crops the image */
+            object-position: center; /* Centers the cropped area */
+            border-radius: 10px; /* Optional: Adds rounded corners */
         }
         iframe {
             width: 100%;
@@ -49,7 +53,7 @@
     </video>
 
     <div class="container">
-        <h1>NeuroGuard AI Survey</h1>
+        <img src="logo.png" alt="NeuroGuard AI Logo" class="logo">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv4N6NsJwDrKv9bHLelJMdw6BfUSpX_slClG2p4BOq2oOzdQ/viewform?embedded=true" 
                 marginheight="0" 
                 marginwidth="0">

@@ -9,30 +9,48 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            background: #777777;
+            color: #ffffff;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Ensures the video stays behind the content */
         }
         .container {
             width: 100%;
             max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
             box-sizing: border-box;
+            z-index: 1; /* Ensures the content stays above the video */
+            position: relative; /* Allows it to flow with the page */
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #00ff40;
+        }
+        iframe {
+            width: 100%;
+            height: 4015px; /* Adjust this height if needed */
+            border: none;
         }
     </style>
 </head>
 <body>
+    <!-- Background Video -->
+    <video autoplay loop muted>
+        <source src="cybersecurity_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <div class="container">
         <h1>NeuroGuard AI Survey</h1>
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScv4N6NsJwDrKv9bHLelJMdw6BfUSpX_slClG2p4BOq2oOzdQ/viewform?embedded=true" 
-                width="100%" 
-                height="4015" 
-                frameborder="0" 
                 marginheight="0" 
                 marginwidth="0">
             Loading\u2026
